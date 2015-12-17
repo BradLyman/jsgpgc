@@ -8,8 +8,12 @@
  * Each grid point contains 4 values.
  * @module gpgpu/DataFrame
  **/
-let Three  = require('three'),
-    kernel = require('./kernel.js');
+let kernel = require('./kernel.js');
+
+/**
+ * Must be initialized before the rest of the library can be used.
+ **/
+let Three = {};
 
 const RENDER_TARGET_SETTINGS = {
   depthBuffer     : false,
@@ -69,4 +73,11 @@ module.exports.create = function(sideLen) {
     write     : writeTarget,
     sideLen   : sideLen,
   };
+};
+
+/**
+ * Provide a three instance for the library to use.
+ **/
+module.exports.init = function(three) {
+  Three = three;
 };

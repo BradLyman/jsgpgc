@@ -24,6 +24,5 @@
   },
   "homepage": "https://github.com/BradLyman/jsgpgc#readme",
   "dependencies": {
-    "three": "^0.73.0"
   }
 }

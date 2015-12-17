@@ -4,8 +4,10 @@
  * @module gpgpu/Kernel
  **/
 'use strict';
-let Three  = require('three'),
-    assign = require('object-assign');
+let assign = require('object-assign');
+
+// Must initialize this before calling other methods
+let Three = {};
 
 /**
  * Vertex shader source code -- simply renders the geometry and passes
@@ -183,3 +185,11 @@ let createKernel = function(sideLen, kernelSrc, customUniforms) {
 };
 
 module.exports.create = createKernel;
+
+/**
+ * Must provide an instance of the Three library
+ * before we can create any kernels.
+ **/
+module.exports.init = function(three) {
+  Three = three;
+};
