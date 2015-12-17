@@ -1,0 +1,29 @@
+{
+  "name": "jsgpgc",
+  "version": "1.0.0",
+  "description": "Utilities for performing general purpose graphics computing with js and Three.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BradLyman/jsgpgc.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "gpgpu",
+    "gpgc",
+    "Three.js",
+    "Three"
+  ],
+  "author": "Brad Lyman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BradLyman/jsgpgc/issues"
+  },
+  "homepage": "https://github.com/BradLyman/jsgpgc#readme",
+  "dependencies": {
+    "three": "^0.73.0"
+  }
+}
