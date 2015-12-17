@@ -15,16 +15,6 @@ let kernel = require('./kernel.js');
  **/
 let Three = {};
 
-const RENDER_TARGET_SETTINGS = {
-  depthBuffer     : false,
-  stencilBuffer   : false,
-  generateMipmaps : false,
-  minFilter       : Three.NearestFilter,
-  magFilter       : Three.LinearFilter,
-  format          : Three.RGBAFormat,
-  type            : Three.FloatType,
-};
-
 /** @class DataFrame **/
 let DataFrame = {};
 DataFrame.prototype = {
@@ -59,6 +49,16 @@ DataFrame.prototype = {
  * @return {DataFrame}
  **/
 module.exports.create = function(sideLen) {
+  const RENDER_TARGET_SETTINGS = {
+    depthBuffer     : false,
+    stencilBuffer   : false,
+    generateMipmaps : false,
+    minFilter       : Three.NearestFilter,
+    magFilter       : Three.LinearFilter,
+    format          : Three.RGBAFormat,
+    type            : Three.FloatType,
+  };
+
   let readTarget = new Three.WebGLRenderTarget(
     sideLen, sideLen, RENDER_TARGET_SETTINGS
   );
